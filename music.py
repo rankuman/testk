@@ -7,7 +7,7 @@ from threading import Thread
 from flask import Flask
 
 # 봇의 토큰을 코드에 직접 작성합니다.
-TOKEN = "your-bot-token-here"  # 여기에 실제 봇 토큰을 입력하세요.
+TOKEN = "MTMyMDU2MDU2ODc5NjU3NzgxNQ.GO54Hy.TtID57Z-hUr0I8IbnFTuXJhf_DqIzZsmq9P-A8"  # 여기에 실제 봇 토큰을 입력하세요.
 
 # Suppress noise about console usage from errors
 youtube_dl.utils.bug_reports_message = lambda: ''
