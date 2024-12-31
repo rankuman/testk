@@ -1,5 +1,5 @@
 Flask
 Werkzeug
 discord.py
-yt_dlp
-youtube_dl
+yt-dlp
+youtube-dl
