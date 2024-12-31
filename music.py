@@ -5,7 +5,9 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 from threading import Thread
 from flask import Flask
-from dico_token import Token  # 봇의 토큰은 dico_token 파일에 저장
+
+# 봇의 토큰을 코드에 직접 작성합니다.
+TOKEN = "your-bot-token-here"  # 여기에 실제 봇 토큰을 입력하세요.
 
 # Suppress noise about console usage from errors
 youtube_dl.utils.bug_reports_message = lambda: ''
@@ -173,11 +175,13 @@ def run_flask():
     app.run(host='0.0.0.0', port=5000)
 
 async def run_bot():
-    await bot.start(Token)
+    await bot.start(TOKEN)  # 여기서 TOKEN을 사용하여 봇을 시작합니다.
 
 def start():
+    # Flask를 별도의 스레드에서 실행합니다.
     flask_thread = Thread(target=run_flask)
     flask_thread.start()
+    # Discord 봇을 실행합니다.
     asyncio.run(run_bot())
 
 # 봇 설정
